@@ -686,7 +686,11 @@ const INIT = {
       '2026-05':{
         mes:'2026-05',
         experimentos:[
-          {id:'m1',tipo:'stop',ponto:'',acao:'',recurso:'',status:'aguardando',resultado:''},
+          {id:'m1',tipo:'start',ponto:'Vídeos com um número considerável de ajustes',acao:'Ter a liberdade de tomar as decisões criativas quando couber',recurso:'',status:'aguardando',resultado:''},
+          {id:'m2',tipo:'stop',ponto:'Autocensura nas decisões criativas — pedir validação antes de tentar',acao:'Parar de se limitar criativamente',recurso:'',status:'aguardando',resultado:''},
+          {id:'m3',tipo:'start',ponto:'Ajustes recorrentes em vídeos por falta de alinhamento de referência antes da execução',acao:'Usar o grupo para envio de referência de vídeos',recurso:'Grupo no Instagram',status:'em_teste',resultado:''},
+          {id:'m4',tipo:'start',ponto:'Entregas subindo para Drive sem revisão prévia, gerando retrabalho de exportação',acao:'Revisar os criativos no Drive antes de liberar para aprovação',recurso:'Checklist de entrega no ClickUp',status:'aguardando',resultado:''},
+          {id:'m5',tipo:'continue',ponto:'Qualidade e clareza nas apresentações — já é um ponto forte',acao:'Sempre montar apresentações bem direcionadas e explicadas em entregas maiores',recurso:'',status:'aguardando',resultado:''},
         ]
       },
       '2026-04':{
@@ -702,19 +706,13 @@ const INIT = {
     }
   }},
   // ═══ CURADORIA ═══
-  curadoria:{julia:[
-    {id:'r1',titulo:'Atomic Design — Brad Frost',tipo:'Livro',cat:'tecnico',link:'https://atomicdesign.bradfrost.com/table-of-contents/',why:'Júlia está construindo o design system da Ezor. Atomic Design dá a lógica de como estruturar componentes do menor para o maior. Vai mudar a forma como ela pensa sistema, não só peças isoladas.'},
-    {id:'r2',titulo:'Tipografia: A Practical Guide — Karen Cheng',tipo:'Livro',cat:'tecnico',link:'https://www.amazon.com.br/Designing-Type-Karen-Cheng/dp/0300111509',why:'O principal motivo de ajuste histórico é tipografia (38%). Antes de corrigir mecanicamente, ela precisa entender a lógica por trás das decisões tipográficas.'},
-    {id:'r3',titulo:'Como dar e receber feedback de design — Figma Blog',tipo:'Artigo',cat:'processo',link:'https://www.figma.com/blog/how-to-give-and-receive-design-feedback/',why:'Júlia está desenvolvendo a habilidade de comunicar decisões de design para outras áreas. Esse material ensina a estruturar pedidos de aprovação e a interpretar feedbacks ambíguos — exatamente o que acontece no fluxo Discord→Drive.'},
-    {id:'r4',titulo:'Motion Design Principles — Google Material',tipo:'Artigo',cat:'tecnico',link:'https://m3.material.io/styles/motion/overview',why:'A skill de motion foi revelada como diferencial em março. É o momento certo de fundamentar com princípios — não só intuição. O Material Motion é conciso e aplicável no dia a dia.'},
-    {id:'r5',titulo:'Getting Things Done (GTD) — David Allen',tipo:'Livro',cat:'processo',link:'https://gettingthingsdone.com/',why:'Júlia tem dois empregos e um volume crescente de tarefas. GTD é um sistema de gestão de demandas que ajuda a priorizar sem perder qualidade — relevante agora que a meta é focar exclusivamente na Spun.'},
-  ]}
+  curadoria:{julia:[]}
 };
 
 // ═══════════════════════════════════════════════════════════════════
 // STORE
 // ═══════════════════════════════════════════════════════════════════
-const KEY='spun_dash_v5b';
+const KEY='spun_dash_v5c';
 function load(){try{const r=localStorage.getItem(KEY);return r?JSON.parse(r):JSON.parse(JSON.stringify(INIT));}catch{return JSON.parse(JSON.stringify(INIT));}}
 function save(d){localStorage.setItem(KEY,JSON.stringify(d));}
 let S=load();
